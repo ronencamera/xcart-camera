@@ -1,0 +1,12 @@
+{##
+ # Option template
+ #
+ # @ListChild (list="file-uploader.menu", zone="admin", weight="1")
+ #}
+
+{% if this.isImage() %}
+    {{ widget(
+        '\\XLite\\Module\\XC\\Camera51\\View\\FileUploaderOption',
+        image=this.object
+    ) }}
+{% endif %}

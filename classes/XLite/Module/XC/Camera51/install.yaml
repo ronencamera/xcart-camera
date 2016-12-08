@@ -1,0 +1,55 @@
+# vim: set ts=2 sw=2 sts=2 et:
+#
+# BulkEditing
+#
+# Copyright (c) 2011-present Qualiteam software Ltd. All rights reserved.
+# See https://www.x-cart.com/license-agreement.html for license details.
+
+XLite\Model\Config:
+
+  - name: gg_title
+    category: XC\Camera51
+    type: XLite\Module\XC\Camera51\View\Instructions
+    orderby: 1
+    value: ''
+    translations:
+      - code: en
+        option_name: 'How to create account'
+        option_comment: 'To enable Malabi, you first need to create subscription for your site.<br /> Follow the instructions below: <br /><a href="http://sandbox-elb-1715989627.us-east-1.elb.amazonaws.com/UsersServer/xcart/subscribeUser?userEmail={{WEB_LC_ROOT}}&redirectUrl=http://www.camera51.com" target="_BLANK" class="btn" style="color: white;background-color: #51b962;">Create subscription</a>'
+
+
+  - name: customer_id
+    category: XC\Camera51
+    type: text
+    value: ''
+    orderby: 2
+    translations:
+      - option_code: en
+        option_name: User Id
+  - name: access_token
+    category: XC\Camera51
+    type: text
+    value: ''
+    orderby: 3
+    translations:
+      - option_code: en
+        option_name: Access Token
+        option_comment: Paste in your Access Token
+
+  - name: agg_title
+    category: XC\Camera51
+    type: XLite\Module\XC\Camera51\View\Instructionssetting
+    orderby: 4
+    value: ''
+    translations:
+      - code: en
+        option_name: 'Manage account'
+        option_comment: 'View account info and cancel via below button. <br><a class="regular-button settings" href="http://sandbox-elb-1715989627.us-east-1.elb.amazonaws.com/UsersServer/xcart/accountInfo?userId={{WEB_LC_ROOT}}&userToken={{WEB_LC_TOKEN}}" target="_BLANK"><span>Settings</span></a>'
+
+XLite\Model\LanguageLabel:
+  - { name: 'Background removal completed successfully, uploading the resulting image', translations: [{ code: en, label: 'Background removal completed successfully, uploading the resulting image' },{ code: ru, label: 'Удаление фона завершено успешно, осуществляется загрузка обработанного изображения' }] }
+  - { name: 'Cannot process the image', translations: [{ code: en, label: 'Cannot process the image' },{ code: ru, label: 'Изображение не может быть обработано' }] }
+  - { name: 'Service response was identified as empty', translations: [{ code: en, label: 'Service response was identified as empty' },{ code: ru, label: 'Ответ сервиса идентифицирован как пустой' }] }
+  - { name: 'Remove background', translations: [{ code: en, label: 'Remove background' },{ code: ru, label: 'Удалить фон' }] }
+  - { name: 'Edit background image', translations: [{ code: en, label: 'Edit image' },{ code: ru, label: 'Удалить фон' }] }
+  - { name: '{{count}} images selected for processing', translations: [{ code: en, label: '' },{ code: ru, label: '' }] }

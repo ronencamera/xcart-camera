@@ -1,0 +1,19 @@
+{##
+ # Background Remover option
+ #}
+
+<li role="presentation" class="divider"></li>
+<li role="presentation" class="remove-background">
+    {% if this.getImage()['backgroundStatus'] == "O" %}
+ <a role="menuitem" tabindex="-1" href="#" class="remove-background-upload" >
+  <i class="button-icon fa fa-eraser"></i>
+  <span>{{ t('Remove background') }}</span>
+ </a>
+    {% endif %}
+    {% if this.getImage()['backgroundStatus'] == 'R' %}
+ <a role="menuitem" tabindex="-1" href="#" class="remove-background-edit remove-background-save" track-id="{{ this.getImage()['trackId'] }}" >
+  <i class="button-icon fa fa-pencil-square-o"></i>
+  <span>{{ t('Edit background image') }}  </span>
+ </a>
+    {% endif %}
+</li>

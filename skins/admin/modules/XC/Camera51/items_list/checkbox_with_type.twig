@@ -1,0 +1,11 @@
+{##
+ # Selector with type
+ #}
+
+<div class="selector">
+    <input type="checkbox"
+           name="{{ this.getSelectorDataPrefix() }}[{{ this.entity.getUniqueIdentifier() }}]"
+           value="{{ this.getEntityTypeForSelector(this.entity) }}"
+           class="selector not-significant"
+           autocomplete="off"/>
+</div>
