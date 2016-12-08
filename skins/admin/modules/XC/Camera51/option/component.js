@@ -162,7 +162,7 @@ define('fileuploader/background-remove-option', [], function() {
       var uploader = jQuery(this.base).data('controller');
       //console.log(uploader);
       var formData = new FormData();
-      uploader.commonData.action = 'uploadFromURL';
+      uploader.commonData.action = 'uploadFromMalabi';
       formData.append('copy', 1);
       formData.append('uploadedUrl', url.replace(/^\/\//, 'https://'));
       formData.append('withoutBackground', true);
