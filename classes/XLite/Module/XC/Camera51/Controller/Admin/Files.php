@@ -1,7 +1,7 @@
 <?php
 namespace XLite\Module\XC\Camera51\Controller\Admin;
 
-class Files extends \XLite\Module\XC\ThemeTweaker\Controller\Admin\Files implements \XLite\Base\IDecorator
+class Files extends \XLite\Controller\Admin\Files implements \XLite\Base\IDecorator
 {
     protected function doActionUploadFromMalabi()
     {
