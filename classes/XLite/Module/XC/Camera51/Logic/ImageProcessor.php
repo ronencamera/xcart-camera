@@ -201,8 +201,8 @@ class ImageProcessor
     public static function isConfiguredProperly()
     {
         // TODO check account status
-        var_dump(static::getConfig('customer_id'));
-        var_dump(static::getConfig('access_token'));
+//        var_dump(static::getConfig('customer_id'));
+//        var_dump(static::getConfig('access_token'));
 
 
         return true;
