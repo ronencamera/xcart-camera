@@ -134,10 +134,9 @@ class Image extends \XLite\Model\Base\Image implements \XLite\Base\IDecorator
     public function postprocessByTemporary(\XLite\Model\TemporaryFile $temporaryFile)
     {
         parent::postprocessByTemporary($temporaryFile);
-        var_dump("ronen");
 
-        var_dump($temporaryFile);
         $this->setBackgroundStatus($temporaryFile->getBackgroundStatus());
+        $this->setTrackId($temporaryFile->getTrackId());
     }
 
     /**
