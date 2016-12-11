@@ -43,7 +43,7 @@ class Instructionssetting extends \XLite\View\FormField\Label\ALabel
         $accessToken = htmlentities( \XLite\Core\Config::getInstance()->XC->Camera51->access_token);
 
         if(empty($customerId) || empty($accessToken)) {
-            return "<b>To manage your account pleaser add User Id and Access Token info and submit. </b>";
+            return "";
         }
 
         $tmpStr = str_replace(
@@ -66,7 +66,7 @@ class Instructionssetting extends \XLite\View\FormField\Label\ALabel
      */
     protected function getFieldTemplate()
     {
-        return 'modules/XC/Camera51/form_field/instructions.twig';
+        return 'modules/XC/Camera51/form_field/instructions_buttons.twig';
     }
 
     /**
@@ -76,6 +76,6 @@ class Instructionssetting extends \XLite\View\FormField\Label\ALabel
      */
     protected function getDefaultTemplate()
     {
-        return 'modules/XC/Camera51/form_field/instructions.twig';
+        return 'modules/XC/Camera51/form_field/instructions_buttons.twig';
     }
 }

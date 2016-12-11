@@ -14,8 +14,8 @@ XLite\Model\Config:
     value: ''
     translations:
       - code: en
-        option_name: 'How to create account'
-        option_comment: 'To enable Malabi, you first need to create subscription for your site.<br /> Follow the instructions below: <br /><a href="http://sandbox-elb-1715989627.us-east-1.elb.amazonaws.com/UsersServer/xcart/subscribeUser?userEmail={{WEB_LC_ROOT}}&redirectUrl=http://www.camera51.com" target="_BLANK" class="btn" style="color: white;background-color: #51b962;">Create subscription</a>'
+        option_name: 'Activate Malabi background removal in 2 simple steps:'
+        option_comment: '1. Purchase subscription here - <a href="http://sandbox-elb-1715989627.us-east-1.elb.amazonaws.com/UsersServer/xcart/subscribeUser?userEmail={{WEB_LC_ROOT}}&redirectUrl=http://www.camera51.com" target="_BLANK" class="btn" style="color: white;background-color: #51b962;">Create subscription</a>'
 
 
   - name: customer_id
@@ -26,6 +26,7 @@ XLite\Model\Config:
     translations:
       - option_code: en
         option_name: User Id
+        option_comment: Past in the User ID that you have received after creating a subscription (to resend User ID enter ‘account settings’ and press ‘resend’)
   - name: access_token
     category: XC\Camera51
     type: text
@@ -34,7 +35,7 @@ XLite\Model\Config:
     translations:
       - option_code: en
         option_name: Access Token
-        option_comment: Paste in your Access Token
+        option_comment: Past in the Access Token that you have received after creating a subscription (to resend User ID enter ‘account settings’ and press ‘resend’)
 
   - name: agg_title
     category: XC\Camera51
@@ -43,8 +44,7 @@ XLite\Model\Config:
     value: ''
     translations:
       - code: en
-        option_name: 'Manage account'
-        option_comment: 'View account info and cancel via below button. <br><a class="regular-button settings" href="http://sandbox-elb-1715989627.us-east-1.elb.amazonaws.com/UsersServer/xcart/accountInfo?userId={{WEB_LC_ROOT}}&userToken={{WEB_LC_TOKEN}}" target="_BLANK"><span>Settings</span></a>'
+        option_comment: '<a class="regular-button settings" href="http://sandbox-elb-1715989627.us-east-1.elb.amazonaws.com/UsersServer/xcart/accountInfo?userId={{WEB_LC_ROOT}}&userToken={{WEB_LC_TOKEN}}" target="_BLANK" style="background-color:  #bfbfbf;color:white">Account settings</a>'
 
 XLite\Model\LanguageLabel:
   - { name: 'Background removal completed successfully, uploading the resulting image', translations: [{ code: en, label: 'Background removal completed successfully, uploading the resulting image' },{ code: ru, label: 'Удаление фона завершено успешно, осуществляется загрузка обработанного изображения' }] }

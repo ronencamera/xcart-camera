@@ -11,12 +11,21 @@ namespace XLite\Module\XC\Camera51\Logic;
 
 class ImageProcessor
 {
-    const SANDBOX_ASYNC_ENDPOINT     = 'https://sandbox.malabi.co/Camera51Server/processImageAsync';
-    const SANDBOX_SYNC_ENDPOINT     = 'https://sandbox.malabi.co/Camera51Server/processImage';
-
     // TODO Production endpoint is not provided yet tgus us
     const PRODUCTION_ASYNC_ENDPOINT = 'http://api.malabi.co/Camera51Server/processImageAsync';
     const PRODUCTION_SYNC_ENDPOINT     = 'https://api.malabi.co/Camera51Server/processImage';
+
+
+
+    /**
+     * Returns processor Id
+     *
+     * @return string
+     */
+    public function getProcessorId()
+    {
+        return 'malabi';
+    }
 
     /**
      * @param \XLite\Model\Base\Image $image
@@ -150,9 +159,7 @@ class ImageProcessor
      */
     protected static function getAsyncEndpoint()
     {
-        return static::isDebug()
-            ? static::SANDBOX_ASYNC_ENDPOINT
-            : static::PRODUCTION_ASYNC_ENDPOINT;
+        return static::PRODUCTION_SYNC_ENDPOINT;
     }
 
     /**
@@ -160,27 +167,20 @@ class ImageProcessor
      */
     protected static function getSyncEndpoint()
     {
-        return static::isDebug()
-            ? static::SANDBOX_SYNC_ENDPOINT
-            : static::PRODUCTION_SYNC_ENDPOINT;
+        return static::PRODUCTION_SYNC_ENDPOINT;
     }
 
-    /**
-     * @return bool
-     */
-    protected static function isDebug()
-    {
-        return static::getConfig('debug_mode');
-    }
-    
+
     /**
      * @return bool
      */
     public static function isReadyToProcess()
     {
-        return static::getConfig('customer_id')
-            && static::getConfig('access_token')
-            && static::isConfiguredProperly();
+
+        return true; // we always want to show the background removal option.
+//        return static::getConfig('customer_id')
+//            && static::getConfig('access_token')
+//            && static::isConfiguredProperly();
     }
 
     /**

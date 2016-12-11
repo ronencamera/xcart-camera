@@ -43,6 +43,19 @@ class ImageProcessor extends \XLite\Controller\Admin\AAdmin
      */
     public function doActionRemoveBackground()
     {
+
+        if(empty(static::getConfig('customer_id')) || empty(static::getConfig('access_token'))){
+            $error = "<span style='font-size:19px'>To activate <u>Remove background</u> go to: </span><br> 
+            <span style='font-size:19px'>Modules – Malabi background removal</span>";
+            \XLite\Core\TopMessage::addError($error);
+            $this->displayJSON([
+                'success'   => false,
+                'resultUrl' => "",
+                'trackId' => "",
+            ]);
+            return;
+        }
+
         $this->set('silent', true);
         $this->setSuppressOutput(true);
         $trackId = "user_" .  static::getConfig('customer_id') . "_" . time() ."_" . rand(1000,3000);

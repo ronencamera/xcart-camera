@@ -44,6 +44,16 @@ abstract class Main extends \XLite\Module\AModule
         return 'Grow sales and make your store look great with Malabi! Malabi will quickly and automatically remove the background from any product photo. Simply upload a photo, and our state of the art algorithm will automatically remove the background and deliver a studio quality product image within seconds. Enjoy Malabi for unlimited number of images monthly!';
     }
 
+//    /**
+//     * Return link to settings form
+//     *
+//     * @return string
+//     */
+//    public static function getSettingsForm()
+//    {
+//        return \XLite\Core\Converter::buildURL('malabi');
+//    }
+
     /**
      * Get module major version
      *
@@ -87,5 +97,10 @@ abstract class Main extends \XLite\Module\AModule
     public static function isReadyToProcess()
     {
         return ImageProcessor::isReadyToProcess();
+    }
+
+    public static function getModuleType()
+    {
+        return static::MODULE_TYPE_CUSTOM_MODULE;
     }
 }
