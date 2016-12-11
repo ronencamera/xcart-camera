@@ -35,7 +35,7 @@ XLite\Model\Config:
     translations:
       - option_code: en
         option_name: Access Token
-        option_comment: Past in the Access Token that you have received after creating a subscription (to resend User ID enter ‘account settings’ and press ‘resend’)
+        option_comment: Past in the Access Token that you have received after creating a subscription (to resend Access Token enter ‘account settings’ and press ‘resend’)
 
   - name: agg_title
     category: XC\Camera51
