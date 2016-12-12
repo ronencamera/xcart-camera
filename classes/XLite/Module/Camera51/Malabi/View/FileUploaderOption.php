@@ -6,7 +6,7 @@
  * See https://www.x-cart.com/license-agreement.html for license details.
  */
 
-namespace XLite\Module\XC\Camera51\View;
+namespace XLite\Module\Camera51\Malabi\View;
 use XLite\Core\Validator\Exception;
 
 /**
@@ -53,7 +53,7 @@ class FileUploaderOption extends \XLite\View\AView
         $list = parent::getJSFiles();
 
         $list[] = array(
-            'file'      => 'modules/XC/Camera51/option/component.js',
+            'file'      => 'modules/Camera51/Malabi/option/component.js',
             'no_minify' => true
         );
         
@@ -69,7 +69,7 @@ class FileUploaderOption extends \XLite\View\AView
     {
         $list = parent::getCSSFiles();
 
-        $list[] = 'modules/XC/Camera51/option/style.less';
+        $list[] = 'modules/Camera51/Malabi/option/style.less';
 
         return $list;
     }
@@ -81,16 +81,16 @@ class FileUploaderOption extends \XLite\View\AView
     {
 
         return parent::isVisible()
-            && \XLite\Module\XC\Camera51\Main::isReadyToProcess()
+            && \XLite\Module\Camera51\Malabi\Main::isReadyToProcess()
             && $this->getImage()
             && $this->hasFile();
 
         return parent::isVisible()
-            && \XLite\Module\XC\Camera51\Main::isReadyToProcess();
+            && \XLite\Module\Camera51\Malabi\Main::isReadyToProcess();
 
     }
 //        if(parent::isVisible()
-//            && \XLite\Module\XC\Camera51\Main::isReadyToProcess()
+//            && \XLite\Module\Camera51\Camera51\Main::isReadyToProcess()
 //            && $this->getImage()
 //            && $this->hasFile()){
 //
@@ -98,13 +98,13 @@ class FileUploaderOption extends \XLite\View\AView
 //            $this->isRemoved = $this->getImage()->isBackgroundRemoved();
 //        }
 //        var_dump( parent::isVisible()
-//            && \XLite\Module\XC\Camera51\Main::isReadyToProcess()
+//            && \XLite\Module\Camera51\Camera51\Main::isReadyToProcess()
 //            && $this->getImage()
 //            && $this->hasFile()
 //            && !$this->getImage()->isBackgroundRemoved());
 //        return ;
 ////        return parent::isVisible()
-////            && \XLite\Module\XC\Camera51\Main::isReadyToProcess()
+////            && \XLite\Module\Camera51\Camera51\Main::isReadyToProcess()
 ////            && $this->getImage()
 ////            && $this->hasFile()
 ////            && !$this->getImage()->isBackgroundRemoved();

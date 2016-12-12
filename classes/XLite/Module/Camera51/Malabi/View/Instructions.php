@@ -6,13 +6,13 @@
  * See https://www.x-cart.com/license-agreement.html for license details.
  */
 
-namespace XLite\Module\XC\Camera51\View;
+namespace XLite\Module\Camera51\Malabi\View;
 
 
 /**
  * Configuration instructions widget for SocialLogin
  */
-class Instructionssetting extends \XLite\View\FormField\Label\ALabel
+class Instructions extends \XLite\View\FormField\Label\ALabel
 {
     /**
      * Register CSS files
@@ -22,10 +22,6 @@ class Instructionssetting extends \XLite\View\FormField\Label\ALabel
     public function getCSSFiles()
     {
         $list[] = [];
-     //   $list = parent::getCSSFiles();
-
-     //   $list[] = 'modules/CDev/SocialLogin/style.css';
-
         return $list;
     }
 
@@ -38,24 +34,11 @@ class Instructionssetting extends \XLite\View\FormField\Label\ALabel
      */
     public function processUrls($str)
     {
-//
-        $customerId = \XLite\Core\Config::getInstance()->XC->Camera51->customer_id ;
-        $accessToken = htmlentities( \XLite\Core\Config::getInstance()->XC->Camera51->access_token);
-
-        if(empty($customerId) || empty($accessToken)) {
-            return "";
-        }
-
-        $tmpStr = str_replace(
-            "{{WEB_LC_ROOT}}",
-            htmlentities($customerId),
-            $str
-        );
 
         return str_replace(
-            "{{WEB_LC_TOKEN}}",
-            htmlentities($accessToken),
-            $tmpStr
+            \XLite\Model\Base\Catalog::WEB_LC_ROOT,
+            htmlentities(\XLite\Core\Auth::getInstance()->getProfile()->getLogin()),
+            $str
         );
     }
 
@@ -66,7 +49,7 @@ class Instructionssetting extends \XLite\View\FormField\Label\ALabel
      */
     protected function getFieldTemplate()
     {
-        return 'modules/XC/Camera51/form_field/instructions_buttons.twig';
+        return 'modules/Camera51/Malabi/form_field/instructions.twig';
     }
 
     /**
@@ -76,6 +59,6 @@ class Instructionssetting extends \XLite\View\FormField\Label\ALabel
      */
     protected function getDefaultTemplate()
     {
-        return 'modules/XC/Camera51/form_field/instructions_buttons.twig';
+        return 'modules/Camera51/Malabi/form_field/instructions.twig';
     }
 }

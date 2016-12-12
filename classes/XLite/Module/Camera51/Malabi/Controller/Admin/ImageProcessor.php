@@ -6,9 +6,9 @@
  * See https://www.x-cart.com/license-agreement.html for license details.
  */
 
-namespace XLite\Module\XC\Camera51\Controller\Admin;
+namespace XLite\Module\Camera51\Malabi\Controller\Admin;
 
-use XLite\Module\XC\Camera51\Logic;
+use XLite\Module\Camera51\Malabi\Logic;
 
 
 /**
@@ -46,7 +46,7 @@ class ImageProcessor extends \XLite\Controller\Admin\AAdmin
 
         if(empty(static::getConfig('customer_id')) || empty(static::getConfig('access_token'))){
             $error = "<span style='font-size:19px'>To activate <u>Remove background</u> go to: </span><br> 
-            <span style='font-size:19px'>Modules – Malabi background removal</span>";
+            <span style='font-size:19px'>Modules – Camera51 background removal</span>";
             \XLite\Core\TopMessage::addError($error);
             $this->displayJSON([
                 'success'   => false,

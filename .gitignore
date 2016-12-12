@@ -10,6 +10,9 @@
 !/classes/XLite/Module/XC
 !/classes/XLite/Module/XC/Camera51
 
+!/classes/XLite/Module/Camera51
+!/classes/XLite/Module/Camera51/Malabi
+
 /skins/*
 /skins/admin/*
 /skins/admin/modules/*
@@ -19,4 +22,7 @@
 !/skins/admin/modules/
 !/skins/admin/modules/XC/
 !/skins/admin/modules/XC/Camera51
+
+!/skins/admin/modules/Camera51/
+!/skins/admin/modules/Camera51/Malabi
 *.gitignore

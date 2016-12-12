@@ -6,8 +6,8 @@
  * See https://www.x-cart.com/license-agreement.html for license details.
  */
 
-namespace XLite\Module\XC\Camera51;
-use XLite\Module\XC\Camera51\Logic\ImageProcessor;
+namespace XLite\Module\Camera51\Malabi;
+use XLite\Module\Camera51\Malabi\Logic\ImageProcessor;
 
 /**
  * Module main class
@@ -21,7 +21,7 @@ abstract class Main extends \XLite\Module\AModule
      */
     public static function getAuthorName()
     {
-        return 'X-Cart team';
+        return 'Camera51';
     }
 
     /**
@@ -31,7 +31,7 @@ abstract class Main extends \XLite\Module\AModule
      */
     public static function getModuleName()
     {
-        return 'Malabi Automatic Background Remover';
+        return 'Camera51 Automatic Background Remover';
     }
 
     /**
@@ -41,7 +41,7 @@ abstract class Main extends \XLite\Module\AModule
      */
     public static function getDescription()
     {
-        return 'Grow sales and make your store look great with Malabi! Malabi will quickly and automatically remove the background from any product photo. Simply upload a photo, and our state of the art algorithm will automatically remove the background and deliver a studio quality product image within seconds. Enjoy Malabi for unlimited number of images monthly!';
+        return 'Grow sales and make your store look great with Camera51! Camera51 will quickly and automatically remove the background from any product photo. Simply upload a photo, and our state of the art algorithm will automatically remove the background and deliver a studio quality product image within seconds. Enjoy Camera51 for unlimited number of images monthly!';
     }
 
 //    /**

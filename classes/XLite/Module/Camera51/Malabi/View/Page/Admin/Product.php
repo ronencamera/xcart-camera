@@ -1,6 +1,6 @@
 <?php
 
-namespace XLite\Module\XC\Camera51\View\Page\Admin;
+namespace XLite\Module\Camera51\Malabi\View\Page\Admin;
 
 
 /**

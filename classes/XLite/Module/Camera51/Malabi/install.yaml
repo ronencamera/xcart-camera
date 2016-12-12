@@ -9,17 +9,17 @@ XLite\Model\Config:
 
   - name: gg_title
     category: XC\Camera51
-    type: XLite\Module\XC\Camera51\View\Instructions
+    type: XLite\Module\Camera51\Malabi\View\Instructions
     orderby: 1
     value: ''
     translations:
       - code: en
         option_name: 'Activate Malabi background removal in 2 simple steps:'
-        option_comment: '1. Purchase subscription here - <a href="https://sandbox.users.malabi.co/UsersServer/xcart/subscribeUser?userEmail={{WEB_LC_ROOT}}&redirectUrl=http://www.camera51.com" target="_BLANK" class="btn" style="color: white;background-color: #51b962;">Create subscription</a>'
+        option_comment: '1. Purchase subscription here - <a href="https://sandbox.users.malabi.co/UsersServer/xcart/subscribeUser?userEmail={{WEB_LC_ROOT}}" target="_BLANK" class="btn" style="color: white;background-color: #51b962;">Create subscription</a>'
 
 
   - name: customer_id
-    category: XC\Camera51
+    category: Camera51\Malabi
     type: text
     value: ''
     orderby: 2
@@ -28,7 +28,7 @@ XLite\Model\Config:
         option_name: User Id
         option_comment: Past in the User ID that you have received after creating a subscription (to resend User ID enter ‘account settings’ and press ‘resend’)
   - name: access_token
-    category: XC\Camera51
+    category: Camera51\Malabi
     type: text
     value: ''
     orderby: 3
@@ -38,8 +38,8 @@ XLite\Model\Config:
         option_comment: Past in the Access Token that you have received after creating a subscription (to resend Access Token enter ‘account settings’ and press ‘resend’)
 
   - name: agg_title
-    category: XC\Camera51
-    type: XLite\Module\XC\Camera51\View\Instructionssetting
+    category: Camera51\Malabi
+    type: XLite\Module\Camera51\Malabi\View\Instructionssetting
     orderby: 4
     value: ''
     translations:

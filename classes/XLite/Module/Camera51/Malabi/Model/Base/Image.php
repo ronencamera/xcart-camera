@@ -6,7 +6,7 @@
  * See https://www.x-cart.com/license-agreement.html for license details.
  */
 
-namespace XLite\Module\XC\Camera51\Model\Base;
+namespace XLite\Module\Camera51\Malabi\Model\Base;
 
 
 class Image extends \XLite\Model\Base\Image implements \XLite\Base\IDecorator

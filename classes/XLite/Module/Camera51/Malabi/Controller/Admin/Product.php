@@ -6,7 +6,7 @@
  * See https://www.x-cart.com/license-agreement.html for license details.
  */
 
-namespace XLite\Module\XC\Camera51\Controller\Admin;
+namespace XLite\Module\Camera51\Malabi\Controller\Admin;
 
 /**
  * Product controller
