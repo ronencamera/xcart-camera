@@ -15,7 +15,7 @@ XLite\Model\Config:
     translations:
       - code: en
         option_name: 'Activate Malabi background removal in 2 simple steps:'
-        option_comment: '1. Purchase subscription here - <a href="http://sandbox-elb-1715989627.us-east-1.elb.amazonaws.com/UsersServer/xcart/subscribeUser?userEmail={{WEB_LC_ROOT}}&redirectUrl=http://www.camera51.com" target="_BLANK" class="btn" style="color: white;background-color: #51b962;">Create subscription</a>'
+        option_comment: '1. Purchase subscription here - <a href="https://sandbox.users.malabi.co/UsersServer/xcart/subscribeUser?userEmail={{WEB_LC_ROOT}}&redirectUrl=http://www.camera51.com" target="_BLANK" class="btn" style="color: white;background-color: #51b962;">Create subscription</a>'
 
 
   - name: customer_id
@@ -44,7 +44,8 @@ XLite\Model\Config:
     value: ''
     translations:
       - code: en
-        option_comment: '<a class="regular-button settings" href="http://sandbox-elb-1715989627.us-east-1.elb.amazonaws.com/UsersServer/xcart/accountInfo?userId={{WEB_LC_ROOT}}&userToken={{WEB_LC_TOKEN}}" target="_BLANK" style="background-color:  #bfbfbf;color:white">Account settings</a>'
+        option_name: https://sandbox.users.malabi.co
+        option_comment: '<a class="regular-button settings" href="https://sandbox.users.malabi.co/UsersServer/xcart/accountInfo?userId={{WEB_LC_ROOT}}&userToken={{WEB_LC_TOKEN}}" target="_BLANK" style="background-color:  #bfbfbf;color:white">Account settings</a>'
 
 XLite\Model\LanguageLabel:
   - { name: 'Background removal completed successfully, uploading the resulting image', translations: [{ code: en, label: 'Background removal completed successfully, uploading the resulting image' },{ code: ru, label: 'Удаление фона завершено успешно, осуществляется загрузка обработанного изображения' }] }

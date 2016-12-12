@@ -269,12 +269,13 @@ define('fileuploader/background-remove-controller', ['ready', 'fileuploader/back
         document.write("    <div id=\"camera51Iframe\" style=\"height:500px;width:100%\"><\/div>");
         document.write("  <\/div>");
         document.write("  <div class=\"modal-footer\" style=\"background-color: white \">");
-        document.write("    <a id=\"camera51-btn-save-image\" class=\" btn white-text malabiBG \"");
-        document.write("       onclick=\"camera51.saveImage()\"");
-        document.write("       style=\"font-size: 14px;margin-right: 9px; margin-left: 23px;\">Save Changes<\/a>");
         document.write("    <a id=\"camera51-btn-show-result\" class=\" btn \"");
         document.write("       style=\"font-size: 14px; margin-left: 10px;\"");
-        document.write("       onclick=\"camera51.showResult()\">preview result<\/a>");
+        document.write("       onclick=\"camera51.showResult()\">Preview Result<\/a>");
+        document.write("    <a id=\"camera51-btn-save-image\" class=\" btn white-text malabiBG \"");
+        document.write("       onclick=\"camera51.saveImage()\"");
+        document.write("       style=\"font-size: 14px;margin-right: 9px; margin-left: 23px;background-color:#393b4b; color:white;\">Save Changes<\/a>");
+
         document.write("  <\/div>");
         document.write("<\/div>");
     }
