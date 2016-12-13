@@ -14,6 +14,7 @@ class ImageProcessor
     // TODO Production endpoint is not provided yet tgus us
     const PRODUCTION_ASYNC_ENDPOINT = 'http://api.malabi.co/Camera51Server/processImageAsync';
     const PRODUCTION_SYNC_ENDPOINT     = 'https://api.malabi.co/Camera51Server/processImage';
+    const PRODUCTION_USER_CREDIT     = 'https://users.malabi.co/UsersServer/v1/getUserCredit';
 
 
 
@@ -75,6 +76,68 @@ class ImageProcessor
             $trackId
         );
     }
+
+    /**
+     * @param        $api_endpoint
+     * @param        $originalUrl
+     * @param int    $trackId
+     * @param string $callbackUrl
+     *
+     * @return null
+     */
+    public static function requestUserCredit( $userId, $userToken)
+    {
+
+
+        $data = array_merge(
+            static::getCommonData(),
+            [
+                'userId'  => $userId,
+                'userToken' => $userToken,
+            ]
+        );
+
+        $request = new \XLite\Core\HTTP\Request( static::getUserCreditEndpoint());
+        $request->verb = 'POST';
+        $request->body = json_encode($data);
+        $response = $request->sendRequest();
+
+
+        $result = null;
+
+        if ($response->body) {
+            $responseDataRaw = json_decode($response->body, true);
+
+            \XLite\Logger::logCustom('camera51', [
+                $responseDataRaw
+            ]);
+
+            if(isset($responseDataRaw['status']) && $responseDataRaw['status'] == "fail") {
+                $error = "<span style='font-size:19px'>There is a problem with your subscription</span><br> 
+                            <span style='font-size:19px'>GoTo Module Setting – Malabi background removal</span>";
+
+
+                return $error;
+
+            }
+
+            if(isset($responseDataRaw['status']) && $responseDataRaw['status'] == "success") {
+
+                if(isset($responseDataRaw['userCredit']) && $responseDataRaw['userCredit'] >0 ) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+
+            }
+
+        } else {
+            \XLite\Core\TopMessage::addError('Service response was identified as empty');
+        }
+
+        return $result;
+    }
+
 
 
     /**
@@ -168,6 +231,14 @@ class ImageProcessor
     protected static function getSyncEndpoint()
     {
         return static::PRODUCTION_SYNC_ENDPOINT;
+    }
+
+    /**
+     * @return string
+     */
+    protected static function getUserCreditEndpoint()
+    {
+        return static::PRODUCTION_USER_CREDIT;
     }
 
 

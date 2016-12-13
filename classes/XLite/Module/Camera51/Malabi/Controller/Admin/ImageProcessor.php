@@ -46,7 +46,7 @@ class ImageProcessor extends \XLite\Controller\Admin\AAdmin
 
         if(empty(static::getConfig('customer_id')) || empty(static::getConfig('access_token'))){
             $error = "<span style='font-size:19px'>To activate <u>Remove background</u> go to: </span><br> 
-            <span style='font-size:19px'>Modules – Camera51 background removal</span>";
+            <span style='font-size:19px'>Modules – Malabi background removal</span>";
             \XLite\Core\TopMessage::addError($error);
             $this->displayJSON([
                 'success'   => false,
@@ -58,6 +58,27 @@ class ImageProcessor extends \XLite\Controller\Admin\AAdmin
 
         $this->set('silent', true);
         $this->setSuppressOutput(true);
+
+
+        $res = Logic\ImageProcessor::requestUserCredit( static::getConfig('customer_id'), static::getConfig('access_token'));
+        if($res == 0){
+            $error = "<span style='font-size:19px'>Your subscription has ended</span><br> 
+                      <span style='font-size:19px'>GoTo Module Setting – Malabi background removal</span>";
+            $this->displayJSON([
+                'success'   => false,
+                'error' => $error
+            ]);
+            return;
+        }
+        if($res != 1){
+            $this->displayJSON([
+                'success'   => false,
+                'error' => $res
+            ]);
+            return;
+
+        }
+
         $trackId = "user_" .  static::getConfig('customer_id') . "_" . time() ."_" . rand(1000,3000);
         $urlWithoutBackground = $this->getImageWithoutBackgroundUrl(
             \XLite\Core\Request::getInstance()->malabiUrl
