@@ -22,8 +22,6 @@ class Instructionssetting extends \XLite\View\FormField\Label\ALabel
     public function getCSSFiles()
     {
         $list[] = [];
-
-
         return $list;
     }
 
@@ -37,8 +35,8 @@ class Instructionssetting extends \XLite\View\FormField\Label\ALabel
     public function processUrls($str)
     {
 //
-        $customerId = \XLite\Core\Config::getInstance()->XC->Camera51->customer_id ;
-        $accessToken = htmlentities( \XLite\Core\Config::getInstance()->XC->Camera51->access_token);
+        $customerId = \XLite\Core\Config::getInstance()->Camera51->Malabi->customer_id ;
+        $accessToken = htmlentities( \XLite\Core\Config::getInstance()->Camera51->Malabi->access_token);
 
         if(empty($customerId) || empty($accessToken)) {
             return "";

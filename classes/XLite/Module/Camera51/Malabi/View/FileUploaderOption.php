@@ -42,7 +42,7 @@ class FileUploaderOption extends \XLite\View\AView
      */
     protected function getDefaultTemplate()
     {
-        return 'modules/XC/Camera51/option/body.twig';
+        return 'modules/Camera51/Malabi/option/body.twig';
     }
 
     /**

@@ -20,7 +20,7 @@ class Product extends \XLite\View\AView
     {
 
 
-        return 'modules/XC/Camera51/option/product.twig';
+        return 'modules/Camera51/Malabi/option/product.twig';
     }
 
     public function getJSFiles()
@@ -28,7 +28,7 @@ class Product extends \XLite\View\AView
         $list = parent::getJSFiles();
 
         $list[] = array(
-            'file'      => 'modules/XC/Camera51/option/component.js',
+            'file'      => 'modules/Camera51/Malabi/option/component.js',
             'no_minify' => true
         );
         return $list;

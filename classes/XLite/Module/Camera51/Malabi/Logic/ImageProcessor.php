@@ -191,8 +191,8 @@ class ImageProcessor
     protected static function getConfig($name = null)
     {
         return $name
-            ? \XLite\Core\Config::getInstance()->XC->Camera51->{$name}
-            : \XLite\Core\Config::getInstance()->XC->Camera51;
+            ? \XLite\Core\Config::getInstance()->Camera51->Malabi->{$name}
+            : \XLite\Core\Config::getInstance()->Camera51->Malabi;
     }
 
     /**

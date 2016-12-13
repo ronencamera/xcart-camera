@@ -8,7 +8,7 @@
 XLite\Model\Config:
 
   - name: gg_title
-    category: XC\Camera51
+    category: Camera51\Malabi
     type: XLite\Module\Camera51\Malabi\View\Instructions
     orderby: 1
     value: ''
@@ -45,7 +45,7 @@ XLite\Model\Config:
     translations:
       - code: en
         option_name: https://sandbox.users.malabi.co
-        option_comment: '<a class="regular-button settings" href="https://sandbox.users.malabi.co/UsersServer/xcart/accountInfo?userId={{WEB_LC_ROOT}}&userToken={{WEB_LC_TOKEN}}" target="_BLANK" style="background-color:  #bfbfbf;color:white">Account settings</a>'
+        option_comment: '<a class="regular-button settings" href="https://sandbox.users.malabi.co/UsersServer/xcart/accountInfo?userId={{WEB_LC_ROOT}}&userToken={{WEB_LC_TOKEN}}" target="_blank" style="background-color:  #bfbfbf;color:white">Account settings</a>'
 
 XLite\Model\LanguageLabel:
   - { name: 'Background removal completed successfully, uploading the resulting image', translations: [{ code: en, label: 'Background removal completed successfully, uploading the resulting image' },{ code: ru, label: 'Удаление фона завершено успешно, осуществляется загрузка обработанного изображения' }] }
