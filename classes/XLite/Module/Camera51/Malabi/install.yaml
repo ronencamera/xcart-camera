@@ -52,5 +52,5 @@ XLite\Model\LanguageLabel:
   - { name: 'Cannot process the image', translations: [{ code: en, label: 'Cannot process the image' },{ code: ru, label: 'Изображение не может быть обработано' }] }
   - { name: 'Service response was identified as empty', translations: [{ code: en, label: 'Service response was identified as empty' },{ code: ru, label: 'Ответ сервиса идентифицирован как пустой' }] }
   - { name: 'Remove background', translations: [{ code: en, label: 'Remove background' },{ code: ru, label: 'Удалить фон' }] }
-  - { name: 'Edit background image', translations: [{ code: en, label: 'Edit image' },{ code: ru, label: 'Удалить фон' }] }
+  - { name: 'Edit background image', translations: [{ code: en, label: 'Fix Background' },{ code: ru, label: 'Фикс фона' }] }
   - { name: '{{count}} images selected for processing', translations: [{ code: en, label: '' },{ code: ru, label: '' }] }
