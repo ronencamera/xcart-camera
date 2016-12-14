@@ -16,7 +16,6 @@ use XLite\Module\Camera51\Malabi\Logic;
  */
 class ImageProcessor extends \XLite\Controller\Admin\AAdmin
 {
-    //test asdasda asdas
     /**
      * Define the actions with no secure token
      *

@@ -61,7 +61,7 @@ class Image extends \XLite\Model\Base\Image implements \XLite\Base\IDecorator
      */
     public function getBackgroundStatusReadable()
     {
-        die("sssss");
+
         $names = $this->getReadableNames();
 
         return $this->getBackgroundStatus() && isset($names[$this->getBackgroundStatus()])
