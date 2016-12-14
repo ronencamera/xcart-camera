@@ -115,24 +115,19 @@ class ImageProcessor
             if(isset($responseDataRaw['status']) && $responseDataRaw['status'] == "fail") {
                 $error = "<span style='font-size:19px'>There is a problem with your subscription</span><br> 
                             <span style='font-size:19px'>GoTo Module Setting – Malabi background removal</span>";
-
-
                 return $error;
-
             }
 
             if(isset($responseDataRaw['status']) && $responseDataRaw['status'] == "success") {
-
                 if(isset($responseDataRaw['userCredit']) && $responseDataRaw['userCredit'] >0 ) {
                     return 1;
                 } else {
                     return 0;
                 }
-
             }
-
         } else {
-            \XLite\Core\TopMessage::addError('Service response was identified as empty');
+            //\XLite\Core\TopMessage::addError('Service response was identified as empty');
+            return "Service response was identified as empty";
         }
 
         return $result;
@@ -289,8 +284,8 @@ class ImageProcessor
         $result = null;
 
 
-        if (isset($data['resultImageUrl']) && $data['resultImageUrl']) {
-            $result = $data['resultImageUrl'];
+        if (isset($data['resultImageURL']) && $data['resultImageURL'] && isset($data['processingResultCode']) && $data['processingResultCode'] < 100 ) {
+            $result = $data['resultImageURL'];
         } else {
             if (isset($data['errors']) && is_array($data['errors'])) {
                 foreach ($data['errors'] as $error) {
@@ -298,10 +293,8 @@ class ImageProcessor
                 }
 
             } elseif (isset($data['processingResult'])) {
-                $processingResultReadable = isset($data['processingResultName'])
-                    ? $data['processingResultName']
-                    : static::getProcessingResultName($data['processingResult']);
-                \XLite\Core\TopMessage::addError('ProcessingResult: ' . $processingResultReadable);
+                $processingResultReadable = static::getProcessingResultName($data['processingResultCode']);
+                \XLite\Core\TopMessage::addError('Cannot remove background: ' . $processingResultReadable);
 
             } else {
                 \XLite\Core\TopMessage::addError('Cannot process the image');
