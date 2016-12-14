@@ -41,6 +41,9 @@ class Image extends \XLite\Model\Base\Image implements \XLite\Base\IDecorator
      */
     public function getBackgroundStatus()
     {
+        if(empty($this->backgroundStatus)){
+            return static::BG_ORIGINAL;
+        }
         return $this->backgroundStatus;
     }
 
