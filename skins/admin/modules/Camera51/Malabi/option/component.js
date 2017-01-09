@@ -210,7 +210,7 @@ define('fileuploader/background-remove-controller', ['ready', 'fileuploader/back
 
     var self = this;
 
-    $.getScript("http://assets-malabi.s3.amazonaws.com/version/v2/assets/camera51.js", function () {
+    $.getScript("https://assets-malabi.s3.amazonaws.com/version/v2/assets/camera51.js", function () {
         $('head').append('<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons" type="text/css" />');
 
         window.initCamera51({

@@ -12,7 +12,7 @@ namespace XLite\Module\Camera51\Malabi\Logic;
 class ImageProcessor
 {
     // TODO Production endpoint is not provided yet tgus us
-    const PRODUCTION_ASYNC_ENDPOINT = 'http://api.malabi.co/Camera51Server/processImageAsync';
+    const PRODUCTION_ASYNC_ENDPOINT = 'https://api.malabi.co/Camera51Server/processImageAsync';
     const PRODUCTION_SYNC_ENDPOINT     = 'https://api.malabi.co/Camera51Server/processImage';
     const PRODUCTION_USER_CREDIT     = 'https://users.malabi.co/UsersServer/v1/getUserCredit';
 
